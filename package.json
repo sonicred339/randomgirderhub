@@ -1,0 +1,12 @@
+{
+  "name": "markdown-render-2220fd",
+  "version": "1.0.0",
+  "description": "A markdown render utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["markdown-render", "utility"],
+  "license": "MIT"
+}

